@@ -1,0 +1,2 @@
+#Secuencia de ping con lista de archivos
+for ip in $(cat ip.txt); do ping -c 1  $ip; done | grep "bytes from" | cut -d" " -f4 | cut -d":" -f1 
